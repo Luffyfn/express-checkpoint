@@ -1,0 +1,23 @@
+extends layout
+
+block layout-content
+    head
+        link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+        script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    form.form-horizontal(role='form' style='width: 50%;')
+        .form-group
+            label.col-sm-2.control-label(for='name') Name
+            .col-sm-10
+                input#name.form-control(type='text' name='name' placeholder='First & Last Name')
+        .form-group
+            label.col-sm-2.control-label(for='email') Email
+            .col-sm-10
+                input#email.form-control(type='email' name='email' placeholder='example@domain.com')
+        .form-group
+            label.col-sm-2.control-label(for='message') Message
+            .col-sm-10
+                textarea.form-control(rows='4' name='message')
+        .form-group
+            .col-sm-10.col-sm-offset-2
+                button#submit.btn.btn-danger(name='submit' type='submit') Contact Us
+

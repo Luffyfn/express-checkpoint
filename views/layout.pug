@@ -1,0 +1,18 @@
+block variables
+doctype html
+// layout
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet" href="/style.css")
+    title #{title}
+  body
+    div#root
+      if(isOpen)
+        include header.pug
+        block layout-content
+        include footer.pug
+      else
+        div.error Sorry the Website is closed. Return from Monday to Friday, from 9am to 5pm. Thank You For Visit !!
